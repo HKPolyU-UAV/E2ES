@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.5">
+   <model name="d435">
+      <pose>0 0 0.035 0 0 0</pose>
+      <link name="base_link">
+         <pose>0 0 0 0 -0 0</pose>
+         <inertial>
+            <pose>0 0.0175 0.0125 0 -0 0</pose>
+            <mass>0.564</mass>
+            <inertia>
+               <ixx>0.00388124</ixx>
+               <ixy>0</ixy>
+               <ixz>0</ixz>
+               <iyy>0.00049894</iyy>
+               <iyz>0</iyz>
+               <izz>0.00387926</izz>
+            </inertia>
+         </inertial>
+         <collision name="collision">
+            <pose>0 0 0.0125 0 -0 0</pose>
+            <geometry>
+               <box>
+                  <size>0.02505 0.09 0.025</size>
+               </box>
+            </geometry>
+            <surface>
+               <contact>
+                  <ode>
+                     <kp>1e+13</kp>
+                     <kd>1</kd>
+                  </ode>
+               </contact>
+               <friction>
+                  <ode>
+                     <mu2>1</mu2>
+                     <fdir1>0 0 0</fdir1>
+                  </ode>
+               </friction>
+            </surface>
+         </collision>
+         <visual name="visual">
+            <pose>0 0 0.0125 1.5708 -0 1.5708</pose>
+            <geometry>
+               <mesh>
+                  <uri>model://d435/meshes/d435.dae</uri>
+               </mesh>
+            </geometry>
+            <material>
+               <ambient>0.5 0.5 0.5 1</ambient>
+               <diffuse>0.9 0.9 0.9 0.5</diffuse>
+               <specular>0.1 0.1 0.1 1</specular>
+               <emissive>0 0 0 1</emissive>
+               <shader type="pixel">
+                  <normal_map>__default__</normal_map>
+               </shader>
+               <lighting>1</lighting>
+            </material>
+            <cast_shadows>1</cast_shadows>
+         </visual>
+         <sensor name="cameracolor" type="camera">
+            <camera name="camera">
+               <horizontal_fov>1.21126</horizontal_fov>
+               <image>
+                  <width>424</width>
+                  <height>240</height>
+                  <format>RGB_INT8</format>
+               </image>
+               <clip>
+                  <near>0.1</near>
+                  <far>10</far>
+               </clip>
+               <noise>
+                  <type>gaussian</type>
+                  <mean>0</mean>
+                  <stddev>0.007</stddev>
+               </noise>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>60</update_rate>
+            <visualize>0</visualize>
+            <pose>0 0.0175 0.0125 0 -0 0</pose>
+         </sensor>
+         <sensor name="cameraired1" type="camera">
+            <camera name="camera">
+               <horizontal_fov>1.48702</horizontal_fov>
+               <image>
+                  <width>424</width>
+                  <height>240</height>
+                  <format>L_INT8</format>
+               </image>
+               <clip>
+                  <near>0.1</near>
+                  <far>10</far>
+               </clip>
+               <noise>
+                  <type>gaussian</type>
+                  <mean>0</mean>
+                  <stddev>0.01</stddev>
+               </noise>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>60</update_rate>
+            <visualize>0</visualize>
+            <pose>0 0.0175 0.0125 0 -0 0</pose>
+         </sensor>
+         <sensor name="cameraired2" type="camera">
+            <camera name="camera">
+               <horizontal_fov>1.48702</horizontal_fov>
+               <image>
+                  <width>424</width>
+                  <height>240</height>
+                  <format>L_INT8</format>
+               </image>
+               <clip>
+                  <near>0.1</near>
+                  <far>10</far>
+               </clip>
+               <noise>
+                  <type>gaussian</type>
+                  <mean>0</mean>
+                  <stddev>0.01</stddev>
+               </noise>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>60</update_rate>
+            <visualize>0</visualize>
+            <pose>0 0.0175 0.0125 0 -0 0</pose>
+         </sensor>
+         <sensor name="cameradepth" type="depth">
+            <camera name="camera">
+               <horizontal_fov>1.48702</horizontal_fov>
+               <image>
+                  <width>424</width>
+                  <height>240</height>
+               </image>
+               <clip>
+                  <near>0.1</near>
+                  <far>10</far>
+               </clip>
+               <noise>
+                  <type>gaussian</type>
+                  <mean>0</mean>
+                  <stddev>0.1</stddev>
+               </noise>
+            </camera>
+            <always_on>1</always_on>
+            <update_rate>60</update_rate>
+            <visualize>0</visualize>
+            <pose>0 0.0175 0.0125 0 -0 0</pose>
+         </sensor>
+      </link>
+      <plugin name="camera" filename="/home/gh034/catkin_ws/devel/lib/librealsense_gazebo_plugin.so">
+         <prefix>camera</prefix>
+         <depthUpdateRate>30.0</depthUpdateRate>
+         <colorUpdateRate>30.0</colorUpdateRate>
+         <infraredUpdateRate>30.0</infraredUpdateRate>
+         <depthTopicName>depth/image_raw</depthTopicName>
+         <depthCameraInfoTopicName>depth/camera_info</depthCameraInfoTopicName>
+         <colorTopicName>color/image_raw</colorTopicName>
+         <colorCameraInfoTopicName>color/camera_info</colorCameraInfoTopicName>
+         <infrared1TopicName>infra1/image_raw</infrared1TopicName>
+         <infrared1CameraInfoTopicName>infra1/camera_info</infrared1CameraInfoTopicName>
+         <infrared2TopicName>infra2/image_raw</infrared2TopicName>
+         <infrared2CameraInfoTopicName>infra2/camera_info</infrared2CameraInfoTopicName>
+         <colorOpticalframeName>camera_color_optical_frame</colorOpticalframeName>
+         <depthOpticalframeName>camera_depth_optical_frame</depthOpticalframeName>
+         <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
+         <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
+         <rangeMinDepth>0.2</rangeMinDepth>
+         <rangeMaxDepth>5.0</rangeMaxDepth>
+         <pointCloud>1</pointCloud>
+         <pointCloudTopicName>depth/color/points</pointCloudTopicName>
+         <pointCloudCutoff>0.25</pointCloudCutoff>
+         <pointCloudCutoffMax>5.0</pointCloudCutoffMax>
+      </plugin>
+   </model>
+</sdf>

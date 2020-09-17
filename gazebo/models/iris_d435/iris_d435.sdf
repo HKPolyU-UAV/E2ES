@@ -2,7 +2,7 @@
 <sdf version="1.5">
   <model name='iris_d435'>
     <include>
-      <uri>model://iris</uri>
+      <uri>model://iris_modified</uri>
     </include>
     <include>
       <uri>model://d435</uri>

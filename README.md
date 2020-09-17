@@ -6,6 +6,10 @@ MAV simulation on Gazebo
 ### Pre-requirement
 We have tested in the Ubuntu 18.04 + ROS melodic environment <br />
 Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup the environment accordingly<br />
+````
+sudo apt-get install libncurses5-dev
+````
+
 ### Usage
 Clone this repository to catkin src folder say ~/catkin_ws/src
 ````

@@ -1,5 +1,0 @@
-<launch>
-        <include file="$(find realsense_gazebo_plugin)/launch/mavros_posix_sitl.launch">
-		<arg name="world" value="$(find realsense_gazebo_plugin)/worlds/test2_static.world"/>
-        </include>
-</launch>

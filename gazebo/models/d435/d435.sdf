@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.5">
    <model name="d435">
-      <pose>0 0 0.035 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
       <link name="base_link">
-         <pose>0 0 0 0 -0 0</pose>
+         <pose>0 0 0 0 0 0</pose>
          <inertial>
             <pose>0 0.0175 0.0125 0 -0 0</pose>
             <mass>0.564</mass>
@@ -20,7 +20,7 @@
             <pose>0 0 0.0125 0 -0 0</pose>
             <geometry>
                <box>
-                  <size>0.02505 0.09 0.025</size>
+                  <size>0.025 0.09 0.025</size>
                </box>
             </geometry>
             <surface>
@@ -58,8 +58,9 @@
             <cast_shadows>1</cast_shadows>
          </visual>
          <sensor name="cameracolor" type="camera">
+            <pose>0 0 0 0 0 0</pose>
             <camera name="camera">
-               <horizontal_fov>1.21126</horizontal_fov>
+               <horizontal_fov>1.500</horizontal_fov>
                <image>
                   <width>424</width>
                   <height>240</height>
@@ -76,13 +77,13 @@
                </noise>
             </camera>
             <always_on>1</always_on>
-            <update_rate>60</update_rate>
+            <update_rate>30</update_rate>
             <visualize>0</visualize>
-            <pose>0 0.0175 0.0125 0 -0 0</pose>
          </sensor>
          <sensor name="cameraired1" type="camera">
+            <pose>0 0 0 0 0 0</pose>
             <camera name="camera">
-               <horizontal_fov>1.48702</horizontal_fov>
+               <horizontal_fov>1.500</horizontal_fov>
                <image>
                   <width>424</width>
                   <height>240</height>
@@ -99,13 +100,14 @@
                </noise>
             </camera>
             <always_on>1</always_on>
-            <update_rate>60</update_rate>
+            <update_rate>30</update_rate>
             <visualize>0</visualize>
             <pose>0 0.0175 0.0125 0 -0 0</pose>
          </sensor>
          <sensor name="cameraired2" type="camera">
+            <pose>0 0.05 0 0 0 0</pose>
             <camera name="camera">
-               <horizontal_fov>1.48702</horizontal_fov>
+               <horizontal_fov>1.500</horizontal_fov>
                <image>
                   <width>424</width>
                   <height>240</height>
@@ -122,11 +124,11 @@
                </noise>
             </camera>
             <always_on>1</always_on>
-            <update_rate>60</update_rate>
+            <update_rate>30</update_rate>
             <visualize>0</visualize>
-            <pose>0 0.0175 0.0125 0 -0 0</pose>
          </sensor>
          <sensor name="cameradepth" type="depth">
+            <pose>0 0 0 0 0 0</pose>
             <camera name="camera">
                <horizontal_fov>1.48702</horizontal_fov>
                <image>
@@ -144,17 +146,16 @@
                </noise>
             </camera>
             <always_on>1</always_on>
-            <update_rate>60</update_rate>
+            <update_rate>30</update_rate>
             <visualize>0</visualize>
-            <pose>0 0.0175 0.0125 0 -0 0</pose>
          </sensor>
       </link>
-      <plugin name="camera" filename="/home/gh034/catkin_ws/devel/lib/librealsense_gazebo_plugin.so">
+      <plugin name="camera" filename="librealsense_gazebo_plugin.so">
          <prefix>camera</prefix>
          <depthUpdateRate>30.0</depthUpdateRate>
          <colorUpdateRate>30.0</colorUpdateRate>
          <infraredUpdateRate>30.0</infraredUpdateRate>
-         <depthTopicName>depth/image_raw</depthTopicName>
+         <depthTopicName>depth_aligned_to_color_and_infra1/image_raw</depthTopicName>
          <depthCameraInfoTopicName>depth/camera_info</depthCameraInfoTopicName>
          <colorTopicName>color/image_raw</colorTopicName>
          <colorCameraInfoTopicName>color/camera_info</colorCameraInfoTopicName>
@@ -167,11 +168,11 @@
          <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
          <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
          <rangeMinDepth>0.2</rangeMinDepth>
-         <rangeMaxDepth>5.0</rangeMaxDepth>
+         <rangeMaxDepth>8.0</rangeMaxDepth>
          <pointCloud>1</pointCloud>
          <pointCloudTopicName>depth/color/points</pointCloudTopicName>
-         <pointCloudCutoff>0.25</pointCloudCutoff>
-         <pointCloudCutoffMax>5.0</pointCloudCutoffMax>
+         <pointCloudCutoff>0.2</pointCloudCutoff>
+         <pointCloudCutoffMax>8.0</pointCloudCutoffMax>
       </plugin>
    </model>
 </sdf>

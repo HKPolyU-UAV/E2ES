@@ -30,7 +30,7 @@ Run the simulator
 roscd mav_sim_gazebo
 ./sim.sh
 ````
-If your work space in not "~/catkin_ws" or your PX4 Firmware is not located at "~/src/Firmware" you should edit the following line in the sim.sh script :
+If your work space in not "catkin_ws" or your PX4 Firmware is not located at "src/Firmware" you should edit the following line in the sim.sh script :
 ````
 cd ~/src/Firmware
 export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo

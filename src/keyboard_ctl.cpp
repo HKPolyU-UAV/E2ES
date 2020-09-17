@@ -179,6 +179,7 @@ int main(int argc, char **argv)
         //        KB_TURNLEFT,
         //        KB_TURNRIGHT,
         int c = getch();// call your non-blocking input function
+        flushinp();
         endwin();
         if (c == '1')
         {
@@ -268,8 +269,6 @@ int main(int argc, char **argv)
         {
             Vec3 rpy_last;
             Vec3 xyz_last;
-            Vec3 rpy_new;
-            Vec3 xyz_new;
             Quaterniond q_last(last_published_pose.pose.orientation.w,
                                last_published_pose.pose.orientation.x,
                                last_published_pose.pose.orientation.y,
@@ -279,6 +278,8 @@ int main(int argc, char **argv)
                             last_published_pose.pose.position.y,
                             last_published_pose.pose.position.z);
             publish_pose = last_published_pose;
+            Vec3 rpy_new = rpy_last;
+            Vec3 xyz_new = xyz_last;
             switch(kb_state)
             {
             case KB_FORWARD:

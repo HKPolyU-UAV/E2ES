@@ -1,17 +1,16 @@
 # mav_sim_gazebo
-MAV simulation on Gazebo
-
-### Demo Video
-
 ### Introduction
-This Kit provides an end to end simulation solution for MAV visual SLAM and path planning researches.
-In this work, several features are added to the [PX4](https://github.com/PX4/Firmware) Gazebo Environment: <br />
--A realsense D435 model based on ([realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)) <br />
+<img src="others/mavsim.png" width="400">
+
+This Kit provides an end to end simulation solution for MAV visual SLAM and path planning researches. <br />
+In this work, several features are added to the default [PX4](https://github.com/PX4/Firmware) Gazebo Simulator: <br />
+-A realsense D435 model (based on [realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)) <br />
 -Modified IRIS MAV model <br />
 -Several structured/unstructured simulation world <br />
 -Keyborad control support <br />
 The work has been verified on Ubuntu 18.04 + ROS melodic environment <br />
 We strongly recommend to you to run this simulation with CUDA supported graphic card!
+### Demo Video
 
 ### Usage
 Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup basic gazebo environment accordingly<br />

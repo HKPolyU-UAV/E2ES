@@ -55,3 +55,4 @@ This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [reals
 
 ### Maintainer
 [Shengyang Chen](https://www.polyu.edu.hk/researchgrp/cywen/index.php/en/people/researchstudent.html)(Dept.ME,PolyU): shengyang.chen@connect.polyu.hk <br />
+Han Chen(Dept.AAE,PolyU):stark.chen@connect.polyu.

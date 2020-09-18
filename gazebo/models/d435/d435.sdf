@@ -62,8 +62,8 @@
             <camera name="camera">
                <horizontal_fov>1.500</horizontal_fov>
                <image>
-                  <width>424</width>
-                  <height>240</height>
+                  <width>640</width>
+                  <height>360</height>
                   <format>RGB_INT8</format>
                </image>
                <clip>
@@ -85,8 +85,8 @@
             <camera name="camera">
                <horizontal_fov>1.500</horizontal_fov>
                <image>
-                  <width>424</width>
-                  <height>240</height>
+                  <width>640</width>
+                  <height>360</height>
                   <format>L_INT8</format>
                </image>
                <clip>
@@ -109,8 +109,8 @@
             <camera name="camera">
                <horizontal_fov>1.500</horizontal_fov>
                <image>
-                  <width>424</width>
-                  <height>240</height>
+                  <width>640</width>
+                  <height>360</height>
                   <format>L_INT8</format>
                </image>
                <clip>
@@ -132,12 +132,12 @@
             <camera name="camera">
                <horizontal_fov>1.48702</horizontal_fov>
                <image>
-                  <width>424</width>
-                  <height>240</height>
+                  <width>640</width>
+                  <height>360</height>
                </image>
                <clip>
                   <near>0.1</near>
-                  <far>15</far>
+                  <far>20</far>
                </clip>
                <noise>
                   <type>gaussian</type>
@@ -168,11 +168,11 @@
          <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
          <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
          <rangeMinDepth>0.2</rangeMinDepth>
-         <rangeMaxDepth>8.0</rangeMaxDepth>
+         <rangeMaxDepth>20.0</rangeMaxDepth>
          <pointCloud>1</pointCloud>
          <pointCloudTopicName>depth/color/points</pointCloudTopicName>
          <pointCloudCutoff>0.2</pointCloudCutoff>
-         <pointCloudCutoffMax>8.0</pointCloudCutoffMax>
+         <pointCloudCutoffMax>20.0</pointCloudCutoffMax>
       </plugin>
    </model>
 </sdf>

@@ -18,6 +18,8 @@ GazeboRosRealsense::~GazeboRosRealsense() {
   ROS_DEBUG_STREAM_NAMED("realsense_camera", "Unloaded");
 }
 
+
+
 void GazeboRosRealsense::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf) {
   // Make sure the ROS node for Gazebo has already been initialized
   if (!ros::isInitialized()) {
@@ -53,12 +55,21 @@ void GazeboRosRealsense::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf) {
     this->pointcloud_pub_ =
         this->rosnode_->advertise<sensor_msgs::PointCloud2>(pointCloudTopic_, 2, false);
   }
+
+  last_time = this->world->SimTime();
 }
 
 void GazeboRosRealsense::OnNewFrame(const rendering::CameraPtr cam,
                                     const transport::PublisherPtr pub) {
-  common::Time current_time = this->world->SimTime();
 
+  common::Time current_time;
+  current_time = this->world->SimTime();
+  if((current_time-last_time).nsec<30000000)
+  {
+    current_time = last_time;
+  }
+  //std::cout << "cout " << (current_time-last_time).nsec << std::endl;
+  //std::cout << "cout " << current_time.sec << "  " << current_time.nsec << std::endl;
   // identify camera
   std::string camera_id = extractCameraName(cam->Name());
   const std::map<std::string, image_transport::CameraPublisher *>
@@ -74,6 +85,7 @@ void GazeboRosRealsense::OnNewFrame(const rendering::CameraPtr cam,
       this->cameraParamsMap_[camera_id].optical_frame;
   this->image_msg_.header.stamp.sec = current_time.sec;
   this->image_msg_.header.stamp.nsec = current_time.nsec;
+  last_time = current_time;
 
   // set image encoding
   const std::map<std::string, std::string> supported_image_encodings = {
@@ -83,7 +95,7 @@ void GazeboRosRealsense::OnNewFrame(const rendering::CameraPtr cam,
       {"BGR_INT8", sensor_msgs::image_encodings::BGR8},
       {"BGR_INT16", sensor_msgs::image_encodings::BGR16},
       {"BGR_A16", sensor_msgs::image_encodings::BGRA16},
-      {"L_INT8", sensor_msgs::image_encodings::TYPE_8UC1}};
+      {"L_INT8", sensor_msgs::image_encodings::MONO8}};
   const auto pixel_format = supported_image_encodings.at(cam->ImageFormat());
 
   // copy from simulation image to ROS msg
@@ -102,6 +114,7 @@ void GazeboRosRealsense::OnNewFrame(const rendering::CameraPtr cam,
   auto camera_info_msg =
       cameraInfo(this->image_msg_, cameras.at(camera_id)->HFOV().Radian());
   image_pub->publish(this->image_msg_, camera_info_msg);
+
 }
 
 // Referenced from gazebo_plugins
@@ -199,7 +212,12 @@ bool GazeboRosRealsense::FillPointCloudHelper(sensor_msgs::PointCloud2 &point_cl
 
 void GazeboRosRealsense::OnNewDepthFrame() {
   // get current time
-  common::Time current_time = this->world->SimTime();
+  common::Time current_time;
+  current_time = this->world->SimTime();
+  if((current_time-last_time).nsec<30000000)
+  {
+    current_time = last_time;
+  }
 
   RealSensePlugin::OnNewDepthFrame();
 
@@ -209,7 +227,7 @@ void GazeboRosRealsense::OnNewDepthFrame() {
   ;
   this->depth_msg_.header.stamp.sec = current_time.sec;
   this->depth_msg_.header.stamp.nsec = current_time.nsec;
-
+  last_time = current_time;
   // set image encoding
   std::string pixel_format = sensor_msgs::image_encodings::TYPE_16UC1;
 

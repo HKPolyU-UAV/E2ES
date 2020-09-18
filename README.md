@@ -48,6 +48,7 @@ Using keyboard to control the MAV in simulator
 ````
 roslaunch mav_sim_gazebo keyboard_ctr.launch
 ````
+<img src="others/kbctr.png" width="400">
 
 ### Acknowledgement
 This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)

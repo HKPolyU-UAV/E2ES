@@ -378,7 +378,7 @@ material wallpaper/wallpaper20
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper21
 {
   technique
   {
@@ -390,14 +390,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall21.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper22
 {
   technique
   {
@@ -409,14 +409,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall22.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper23
 {
   technique
   {
@@ -428,14 +428,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall23.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper24
 {
   technique
   {
@@ -447,14 +447,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall24.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper25
 {
   technique
   {
@@ -466,14 +466,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall25.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper26
 {
   technique
   {
@@ -485,14 +485,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall26.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper27
 {
   technique
   {
@@ -504,14 +504,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall27.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper28
 {
   technique
   {
@@ -523,14 +523,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall28.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper29
 {
   technique
   {
@@ -542,14 +542,14 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall29.png
         filtering trilinear
       }
     }
   }
 }
 
-material wallpaper/wallpaper1
+material wallpaper/wallpaper30
 {
   technique
   {
@@ -561,9 +561,124 @@ material wallpaper/wallpaper1
 
       texture_unit
       {
-        texture wall1.png
+        texture wall30.png
         filtering trilinear
       }
     }
   }
 }
+
+material wallpaper/wallpaper31
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall31.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material wallpaper/wallpaper32
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall32.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material wallpaper/wallpaper33
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall33.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material wallpaper/wallpaper34
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall34.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material wallpaper/wallpaper35
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall35.png
+        filtering trilinear
+      }
+    }
+  }
+}
+
+material wallpaper/wallpaper36
+{
+  technique
+  {
+    pass
+    {
+      ambient 1.0 1.0 1.0 1.0
+      diffuse 1.0 1.0 1.0 1.0
+      specular 0.2 0.2 0.2 1.0 12.5
+
+      texture_unit
+      {
+        texture wall36.png
+        filtering trilinear
+      }
+    }
+  }
+}
+

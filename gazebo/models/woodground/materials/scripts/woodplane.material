@@ -11,7 +11,7 @@ material WoodGround/Image
 
       texture_unit
       {
-        texture woodground400.png
+        texture woodground1024.png
         filtering trilinear
       }
     }

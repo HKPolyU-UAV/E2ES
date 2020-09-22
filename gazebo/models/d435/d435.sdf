@@ -73,7 +73,7 @@
                <noise>
                   <type>gaussian</type>
                   <mean>0</mean>
-                  <stddev>0.007</stddev>
+                  <stddev>0.0</stddev>
                </noise>
             </camera>
             <always_on>1</always_on>
@@ -96,7 +96,7 @@
                <noise>
                   <type>gaussian</type>
                   <mean>0</mean>
-                  <stddev>0.01</stddev>
+                  <stddev>0.0</stddev>
                </noise>
             </camera>
             <always_on>1</always_on>
@@ -120,7 +120,7 @@
                <noise>
                   <type>gaussian</type>
                   <mean>0</mean>
-                  <stddev>0.01</stddev>
+                  <stddev>0.0</stddev>
                </noise>
             </camera>
             <always_on>1</always_on>
@@ -142,7 +142,7 @@
                <noise>
                   <type>gaussian</type>
                   <mean>0</mean>
-                  <stddev>0.1</stddev>
+                  <stddev>0.0</stddev>
                </noise>
             </camera>
             <always_on>1</always_on>

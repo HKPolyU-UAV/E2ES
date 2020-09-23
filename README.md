@@ -14,6 +14,12 @@ We strongly recommend to you to run this simulation with CUDA supported graphic 
 
 ### Usage
 Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup basic gazebo environment accordingly<br />
+Install pre-required packages
+````
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo bash ./install_geographiclib_datasets.sh
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev 
+````
 Clone this repository to catkin src folder say: ~/catkin_ws/src
 ````
 cd ~/catkin_ws/src

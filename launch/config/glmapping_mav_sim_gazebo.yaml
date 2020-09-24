@@ -12,10 +12,10 @@ glmapping_lm_n_Z_below:  10
 glmapping_lm_n_Z_over:   10
 
 #Golbalmap papameter
-glmapping_gm_d_x:             0.1
-glmapping_gm_n_x:             400
-glmapping_gm_d_y:             0.1
-glmapping_gm_n_y:             400
+glmapping_gm_d_x:             0.2
+glmapping_gm_n_x:             250
+glmapping_gm_d_y:             0.2
+glmapping_gm_n_y:             250
 glmapping_gm_d_z:             0.2
 glmapping_gm_n_z:              15
 glmapping_gm_min_z:           0.3

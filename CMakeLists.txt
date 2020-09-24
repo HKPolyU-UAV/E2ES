@@ -33,7 +33,6 @@ catkin_package(
 
 include_directories(
     include
-    SYSTEM
     ${catkin_INCLUDE_DIRS}
     ${GAZEBO_INCLUDE_DIRS}
     ${Sophus_INCLUDE_DIRS}

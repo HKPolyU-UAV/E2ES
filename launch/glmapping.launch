@@ -18,7 +18,7 @@
         name="glmapping_LocalMapNodeletClass_loader" output="screen"
         launch-prefix="bash -c 'sleep 2; $0 $@' ">
         <remap from="/glmapping/pc"          to="/camera/depth/color/points"/>
-        <remap from="/glmapping/pose"        to="/imu_pose"/>
+        <remap from="/glmapping/pose"        to="/mavros/vision_pose/pose"/>
     </node>
 
     <node pkg="nodelet" type="nodelet" args="load glmapping/GlobalMapNodeletClass glmapping_nodelet_manager"

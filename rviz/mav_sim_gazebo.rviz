@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /FLVIS1
         - /FLVIS1/IMU_POSE1
       Splitter Ratio: 0.5
     Tree Height: 304
@@ -126,16 +127,16 @@ Visualization Manager:
           Axes Radius: 0.10000000149011612
           Class: rviz/Pose
           Color: 255; 25; 0
-          Enabled: true
+          Enabled: false
           Head Length: 0.30000001192092896
           Head Radius: 0.10000000149011612
           Name: IMU_POSE
           Shaft Length: 1
           Shaft Radius: 0.05000000074505806
           Shape: Axes
-          Topic: /imu_pose
+          Topic: /mavros/vision_pose/pose
           Unreliable: false
-          Value: true
+          Value: false
         - Alpha: 1
           Buffer Length: 1
           Class: rviz/Path
@@ -221,25 +222,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 24.71638298034668
+      Distance: 5.737078666687012
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.7245461940765381
-        Y: 0.5571284294128418
+        X: 2.7225348949432373
+        Y: -8.960803031921387
         Z: -4.76837158203125e-7
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8897969722747803
+      Pitch: 1.2197961807250977
       Target Frame: <Fixed Frame>
       Value: ThirdPersonFollower (rviz)
-      Yaw: 2.4153900146484375
+      Yaw: 1.827229380607605
     Saved: ~
 Window Geometry:
   Color:

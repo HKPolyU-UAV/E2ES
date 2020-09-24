@@ -22,7 +22,7 @@
         <remap from="/vo/depth_image"  to="/camera/depth_aligned_to_color_and_infra1/image_raw"/>
         <remap from="/vo/image"        to="/camera/infra1/image_raw"/>
         <remap from="/imu"             to="/iris/imu"/>
-        <remap from="/imu_pose"             to="/mavros/vision_pose/pose"/>
+        <remap from="/imu_pose"        to="/mavros/vision_pose/pose"/>
     </node>
 
     <!-- LocalMapNode -->

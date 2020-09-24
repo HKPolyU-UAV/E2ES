@@ -1,0 +1,43 @@
+
+
+##glmapping parameter
+#Localmap radius d_Rho*n_Rho
+#devition of orientation 360/d_Phi_deg
+#Number of grid n_Rho*(360/d_Phi)*(nz_below+nz_over)
+glmapping_lm_d_Rho:     0.3
+glmapping_lm_d_Phi_deg:   3
+glmapping_lm_d_Z:       0.2
+glmapping_lm_n_Rho:      20
+glmapping_lm_n_Z_below:  10
+glmapping_lm_n_Z_over:   10
+
+#Golbalmap papameter
+glmapping_gm_d_x:             0.1
+glmapping_gm_n_x:             400
+glmapping_gm_d_y:             0.1
+glmapping_gm_n_y:             400
+glmapping_gm_d_z:             0.2
+glmapping_gm_n_z:              15
+glmapping_gm_min_z:           0.3
+glmapping_gm_measurement_cnt:  10
+#from 0.01 to 0.99
+glmapping_gm_occupied_p_sh:   0.9
+glmapping_gm_free_p_sh:       0.1
+
+use_exactsync:    false
+
+publish_T_wb:      true
+world_frame_id:    "map"
+body_frame_id:     "body_frame"
+
+publish_T_bs:      true
+##transformation from sensor frame to body frame
+T_B_S:
+[  0.0,   0.0,  1.0,  0.12,
+  -1.0,   0.0,  0.0,  0.0,
+   0.0,  -1.0,  0.0,  0.0,
+   0.0,   0.0,  0.0,  1.0]
+sensor_frame_id:   "camera_depth_optical_frame"
+
+##localmap_frame_base: tranlation is link to body frame, no rotation
+localmap_frame_id: "localmap_frame"

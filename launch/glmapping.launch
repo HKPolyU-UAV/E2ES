@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+    <param name ="/use_sim_time" value="true"/>
+
+<!--glmapping##################################################################################################-->
+    <arg name="node_start_delay"  default="1.0" />
+    <param name="/glmapping_configfile" type="string" value="$(find mav_sim_gazebo)/launch/config/glmapping_mav_sim_gazebo.yaml"/>
+
+    <!-- Manager -->
+    <node pkg="nodelet" type="nodelet"
+          name="glmapping_nodelet_manager" args="manager" output="screen">
+          <param name="num_worker_threads" value="2" />
+    </node>
+
+<!--    <remap from="/glmapping/pose"        to="/imu_pose"/>
+    <remap from="/glmapping/pose"        to="/gt_iris_base_link_imu"/>-->
+    <node pkg="nodelet" type="nodelet" args="load glmapping/LocalMapNodeletClass glmapping_nodelet_manager"
+        name="glmapping_LocalMapNodeletClass_loader" output="screen"
+        launch-prefix="bash -c 'sleep 2; $0 $@' ">
+        <remap from="/glmapping/pc"          to="/camera/depth/color/points"/>
+        <remap from="/glmapping/pose"        to="/imu_pose"/>
+    </node>
+
+    <node pkg="nodelet" type="nodelet" args="load glmapping/GlobalMapNodeletClass glmapping_nodelet_manager"
+        name="glmapping_GlobalMapNodeletClass_loader" output="screen"
+        launch-prefix="bash -c 'sleep 1; $0 $@' ">
+    </node>
+
+</launch>

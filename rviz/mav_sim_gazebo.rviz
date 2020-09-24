@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /FLVIS1/IMU_POSE1
       Splitter Ratio: 0.5
     Tree Height: 304
   - Class: rviz/Selection
@@ -121,6 +122,21 @@ Visualization Manager:
           Unreliable: false
           Value: true
         - Alpha: 1
+          Axes Length: 1
+          Axes Radius: 0.10000000149011612
+          Class: rviz/Pose
+          Color: 255; 25; 0
+          Enabled: true
+          Head Length: 0.30000001192092896
+          Head Radius: 0.10000000149011612
+          Name: IMU_POSE
+          Shaft Length: 1
+          Shaft Radius: 0.05000000074505806
+          Shape: Axes
+          Topic: /imu_pose
+          Unreliable: false
+          Value: true
+        - Alpha: 1
           Buffer Length: 1
           Class: rviz/Path
           Color: 32; 74; 135
@@ -157,6 +173,26 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: FLVIS
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /localmap
+          Name: Localmap
+          Namespaces:
+            points: true
+          Queue Size: 100
+          Value: true
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /globalmap
+          Name: Globalmap
+          Namespaces:
+            points: true
+          Queue Size: 100
+          Value: true
+      Enabled: true
+      Name: GLMAPPING
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236
@@ -185,7 +221,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 75.17887878417969
+      Distance: 24.71638298034668
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -200,10 +236,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 0.8897969722747803
       Target Frame: <Fixed Frame>
       Value: ThirdPersonFollower (rviz)
-      Yaw: 3.045395612716675
+      Yaw: 2.4153900146484375
     Saved: ~
 Window Geometry:
   Color:

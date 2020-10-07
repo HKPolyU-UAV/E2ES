@@ -12,6 +12,10 @@ The work has been verified on Ubuntu 18.04 + ROS melodic environment <br />
 We strongly recommend to you to run this simulation with CUDA supported graphic card!
 ### Demo Video
 
+| manual control    | Click and fly navigation   |
+| ---------------------- | ---------------------- |
+| <img src="others/manual_kb_ctl.gif" width="400">  | <img src="others/click_and_fly.gif" width="400">  |
+
 ### Usage
 Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup basic gazebo environment accordingly<br />
 Install pre-required packages

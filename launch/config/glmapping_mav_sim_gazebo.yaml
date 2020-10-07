@@ -13,12 +13,12 @@ glmapping_lm_n_Z_over:   10
 
 #Golbalmap papameter
 glmapping_gm_d_x:             0.2
-glmapping_gm_n_x:             250
+glmapping_gm_n_x:             110
 glmapping_gm_d_y:             0.2
-glmapping_gm_n_y:             250
+glmapping_gm_n_y:             110
 glmapping_gm_d_z:             0.2
 glmapping_gm_n_z:              15
-glmapping_gm_min_z:           0.3
+glmapping_gm_min_z:           0.5
 glmapping_gm_measurement_cnt:  10
 #from 0.01 to 0.99
 glmapping_gm_occupied_p_sh:   0.9

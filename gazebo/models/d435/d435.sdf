@@ -167,11 +167,11 @@
          <depthOpticalframeName>camera_depth_optical_frame</depthOpticalframeName>
          <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
          <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
-         <rangeMinDepth>0.2</rangeMinDepth>
+         <rangeMinDepth>0.01</rangeMinDepth>
          <rangeMaxDepth>20.0</rangeMaxDepth>
          <pointCloud>1</pointCloud>
          <pointCloudTopicName>depth/color/points</pointCloudTopicName>
-         <pointCloudCutoff>0.2</pointCloudCutoff>
+         <pointCloudCutoff>0.01</pointCloudCutoff>
          <pointCloudCutoffMax>20.0</pointCloudCutoffMax>
       </plugin>
    </model>

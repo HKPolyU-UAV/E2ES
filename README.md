@@ -57,7 +57,20 @@ Using keyboard to control the MAV in simulator
 ````
 roslaunch mav_sim_gazebo keyboard_ctr.launch
 ````
-<img src="others/kbctr.png" width="400">
+<img src="others/kbctr.png" width="300">
+
+### Running End-To-End simulation
+You can use the FLVIS-glmapping-FUXI(localization-mapping-planning kits) navigation system. <br />
+The first step is to install [FLVIS](https://github.com/HKPolyU-UAV/FLVIS), [glmapping](https://github.com/HKPolyU-UAV/glmapping) and [FUXI](https://github.com/chenhanpolyu/fuxi-planner) accordinly. <br />
+Then start the simulator localization mapping and planning kit in sequence. <br />
+````
+roscd mav_sim_gazebo
+./sim.sh
+roslaunch mav_sim_gazebo flvis.launch
+roslaunch mav_sim_gazebo glmapping.launch
+roslaunch mav_sim_gazebo fuxi.launch
+````
+You can use the 2D-Nav-Goal in RVIZ to publish your destination. <br />
 
 ### Acknowledgement
 This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)

@@ -13,11 +13,11 @@ We strongly recommend to you to run this simulation with CUDA supported graphic 
 ### Demo Video
 
 <a href="https://www.youtube.com/watch?v=sKkA5f62P6g" target="_blank"><img src="https://img.youtube.com/vi/sKkA5f62P6g/0.jpg" 
-alt="cla" width="600" border="1" /></a>
+alt="cla" width="400" border="0" /></a>
 
 | manual control    | Click and fly navigation   |
 | ---------------------- | ---------------------- |
-| <img src="others/manual_kb_ctl.gif" width="400">  | <img src="others/click_and_fly.gif" width="400">  |
+| <img src="others/manual_kb_ctl.gif" width="300">  | <img src="others/click_and_fly.gif" width="300">  |
 
 ### Usage
 Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup basic gazebo environment accordingly<br />

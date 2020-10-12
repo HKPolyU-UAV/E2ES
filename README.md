@@ -12,6 +12,9 @@ The work has been verified on Ubuntu 18.04 + ROS melodic environment <br />
 We strongly recommend to you to run this simulation with CUDA supported graphic card!
 ### Demo Video
 
+<a href="https://www.youtube.com/watch?v=sKkA5f62P6g" target="_blank"><img src="https://img.youtube.com/vi/sKkA5f62P6g/0.jpg" 
+alt="cla" width="600" border="1" /></a>
+
 | manual control    | Click and fly navigation   |
 | ---------------------- | ---------------------- |
 | <img src="others/manual_kb_ctl.gif" width="400">  | <img src="others/click_and_fly.gif" width="400">  |

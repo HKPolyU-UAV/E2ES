@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find fuxi-planner)/launch/plc_filter_rgb.launch"></include>
+    
+    <node pkg="fuxi-planner" type ="plc_point2_ccst.py" name="plc_point2_ccst" output="screen"/>
+    <node pkg="fuxi-planner" type ="global_planner_ccst.py" name="global_planner_ccst" output="screen"/>
+
+    <arg name="node_start_delay"  default="5.0" />
+    <node pkg="fuxi-planner" type ="program_flyonce.py" name="program_flyonce" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+    <node pkg="fuxi-planner" type ="arm_offboard.py" name="arm_offboard" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+</launch>

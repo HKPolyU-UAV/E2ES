@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="fuxi-planner" type ="program_flyonce.py" name="program_flyonce" output="screen"/>
+	<node pkg="fuxi-planner" type ="arm_offboard.py" name="arm_offboard" output="screen"/>
+
+</launch>

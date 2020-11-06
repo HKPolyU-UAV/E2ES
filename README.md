@@ -50,7 +50,8 @@ Compile
 cd ~/catkin_ws/
 catkin_make
 ````
-Edit the path in mav_sim_gazebo/sim.sh script(Line 1 to 4)
+By default **ROS_WORK_SPACE_PATH** is ~/catkin_ws and **PX4_Firmware_PATH** is ~/PX4-Autopilot <br />
+If Not, Edit the path in mav_sim_gazebo/sim.sh script(Line 1 to 4)
 ````
 export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo/models
@@ -59,18 +60,16 @@ cd ~/PX4-Autopilot
 ````
 to
 ````
-export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo/models
-export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/YOUR_WORK_SPACE/devel/lib
+export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:ROS_WORK_SPACE_PATH/src/mav_sim_gazebo/gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:ROS_WORK_SPACE_PATH/src/mav_sim_gazebo/gazebo/models
+export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:ROS_WORK_SPACE_PATH/devel/lib
 cd PX4_Firmware_PATH
 ````
-
 Run the simulator
 ````
 roscd mav_sim_gazebo
 ./sim.sh
 ````
-
 Using keyboard to control the MAV in simulator
 ````
 roslaunch mav_sim_gazebo keyboard_ctr.launch

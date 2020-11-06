@@ -20,13 +20,26 @@ alt="cla" width="400" border="0" /></a>
 | <img src="others/manual_kb_ctl.gif" width="300">  | <img src="others/click_and_fly.gif" width="300">  |
 
 ### Usage
-Follow the px4's [ROS with Gazebo Simulation](https://dev.px4.io/v1.9.0/en/simulation/ros_interface.html) tutorial and setup basic gazebo environment accordingly<br />
-Install pre-required packages
+Install pre-requires:
 ````
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip
+pip3 install --user empy toml numpy packaging jinja2
+pip install numpy toml empy packaging
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh
-sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev 
 ````
+
+Downloadn and install the PX4 
+pre-requests
+````
+git clone https://github.com/PX4/PX4-Autopilot.git
+cd PX4-Autopilot/
+git checkout 4f6faac
+git submodule sync --recursive
+git submodule update --init --recursive
+make px4_sitl_default gazebo
+````
+
 Clone this repository to catkin src folder say: ~/catkin_ws/src
 ````
 cd ~/catkin_ws/src
@@ -37,25 +50,27 @@ Compile
 cd ~/catkin_ws/
 catkin_make
 ````
+Edit the path in mav_sim_gazebo/sim.sh script(Line 1 to 4)
+````
+export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo/models
+export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/catkin_ws/devel/lib
+cd ~/PX4-Autopilot
+````
+to
+````
+export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo/models
+export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/YOUR_WORK_SPACE/devel/lib
+cd PX4_Firmware_PATH
+````
+
 Run the simulator
 ````
 roscd mav_sim_gazebo
 ./sim.sh
 ````
-If your work space in not "catkin_ws" or your PX4 Firmware is not located at "src/Firmware" you should edit the following line in the sim.sh script :
-````
-cd ~/src/Firmware
-export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo/models
-export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/catkin_ws/devel/lib
-````
-to
-````
-cd PX4_Firmware_PATH
-export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/YOUR_WORK_SPACE/src/mav_sim_gazebo/gazebo/models
-export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/YOUR_WORK_SPACE/devel/lib
-````
+
 Using keyboard to control the MAV in simulator
 ````
 roslaunch mav_sim_gazebo keyboard_ctr.launch

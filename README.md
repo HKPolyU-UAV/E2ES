@@ -29,12 +29,11 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 sudo bash ./install_geographiclib_datasets.sh
 ````
 
-Downloadn and install the PX4 
-pre-requests
+Downloadn and install the PX4 (1.11.0)
 ````
 git clone https://github.com/PX4/PX4-Autopilot.git
 cd PX4-Autopilot/
-git checkout 4f6faac
+git checkout 71db090
 git submodule sync --recursive
 git submodule update --init --recursive
 make px4_sitl_default gazebo

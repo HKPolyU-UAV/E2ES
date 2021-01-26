@@ -44,6 +44,11 @@ Clone this repository to catkin src folder say: ~/catkin_ws/src
 cd ~/catkin_ws/src
 git clone https://github.com/Ttoto/mav_sim_gazebo.git
 ````
+Install 3rd Part Library
+````
+cd ~/catkin_ws/src/mav_sim_gazebo/3rdPartLib
+sudo ./install3rdPartLib.sh
+````
 Compile
 ````
 cd ~/catkin_ws/

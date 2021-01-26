@@ -22,7 +22,7 @@ alt="cla" width="400" border="0" /></a>
 ### Usage
 Install pre-requires:
 ````
-sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs ros-melodic-sophus libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip
 pip3 install --user empy toml numpy packaging jinja2
 pip install numpy toml empy packaging
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh

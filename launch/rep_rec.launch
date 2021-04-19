@@ -27,7 +27,7 @@
         <param name="repub_type" type="string" value="Path" />
         <param name="repub_topic" type="string" value="/flvis_path" />
         <!--output_file_path = "0" disable the file output function-->
-        <param name="output_file_path" type="string" value="$(find mav_sim_gazebo)/results/flvis.txt" />
+        <param name="output_file_path" type="string" value="$(find e2es)/results/flvis.txt" />
     </node>
 
     <node pkg="flvis" type="vo_repub_rec" name="vicon2path" output="screen">
@@ -58,7 +58,7 @@
         <param name="repub_type" type="string" value="Path" />
         <param name="repub_topic" type="string" value="/gt" />
         <!--output_file_path = "0" disable the file output function-->
-        <param name="output_file_path" type="string" value="$(find mav_sim_gazebo)/results/sim_gt.txt" />
+        <param name="output_file_path" type="string" value="$(find e2es)/results/sim_gt.txt" />
     </node>
 
 

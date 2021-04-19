@@ -4,7 +4,7 @@
 
 <!--glmapping##################################################################################################-->
     <arg name="node_start_delay"  default="1.0" />
-    <param name="/glmapping_configfile" type="string" value="$(find mav_sim_gazebo)/launch/config/glmapping_mav_sim_gazebo.yaml"/>
+    <param name="/glmapping_configfile" type="string" value="$(find e2es)/launch/config/glmapping_e2es.yaml"/>
 
     <!-- Manager -->
     <node pkg="nodelet" type="nodelet"

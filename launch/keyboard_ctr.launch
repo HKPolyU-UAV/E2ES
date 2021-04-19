@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="mav_sim_gazebo" type="keyboard_ctl" name="keyboard_ctl" output="screen">
+    <node pkg="e2es" type="keyboard_ctl" name="keyboard_ctl" output="screen">
         <param name="max_z" type="double" value="2.5" />
         <param name="min_z" type="double" value="-0.1" />
         <param name="max_x" type="double" value="20" />

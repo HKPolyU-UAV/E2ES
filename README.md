@@ -23,9 +23,10 @@ alt="cla" width="400" border="0" /></a>
 ### Usage
 Install pre-requires:
 ````
-sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip
+sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip python-testresources libignition-math2 libgazebo9-dev
 pip3 install --user empy toml numpy packaging jinja2
 pip install numpy toml empy packaging
+sudo apt upgrade libignition-math2
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh
 ````
@@ -44,11 +45,11 @@ make px4_sitl_default gazebo
 Clone this repository to catkin src folder say: ~/catkin_ws/src
 ````
 cd ~/catkin_ws/src
-git clone https://github.com/Ttoto/mav_sim_gazebo.git
+git clone https://github.com/HKPolyU-UAV/E2ES.git
 ````
 Install 3rd Part Library
 ````
-cd ~/catkin_ws/src/mav_sim_gazebo/3rdPartLib
+cd ~/catkin_ws/src/e2es/3rdPartLib
 sudo ./install3rdPartLib.sh
 ````
 Compile
@@ -57,28 +58,28 @@ cd ~/catkin_ws/
 catkin_make
 ````
 By default **ROS_WORK_SPACE_PATH** is ~/catkin_ws and **PX4_Firmware_PATH** is ~/PX4-Autopilot <br />
-If Not, Edit the path in mav_sim_gazebo/sim.sh script(Line 1 to 4)
+If Not, Edit the path in E2ES/sim.sh script(Line 1 to 4)
 ````
-export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/mav_sim_gazebo/gazebo/models
+export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:~/catkin_ws/src/e2es/gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/catkin_ws/src/e2es/gazebo/models
 export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/catkin_ws/devel/lib
 cd ~/PX4-Autopilot
 ````
 to
 ````
-export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:ROS_WORK_SPACE_PATH/src/mav_sim_gazebo/gazebo
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:ROS_WORK_SPACE_PATH/src/mav_sim_gazebo/gazebo/models
+export GAZEBO_RESOURCE_PATH=$GAZEBO_RESOURCE_PATH:ROS_WORK_SPACE_PATH/src/e2es/gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:ROS_WORK_SPACE_PATH/src/e2es/gazebo/models
 export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:ROS_WORK_SPACE_PATH/devel/lib
 cd PX4_Firmware_PATH
 ````
 Run the simulator
 ````
-roscd mav_sim_gazebo
+roscd e2es
 ./sim.sh
 ````
 Using keyboard to control the MAV in simulator
 ````
-roslaunch mav_sim_gazebo keyboard_ctr.launch
+roslaunch e2es keyboard_ctr.launch
 ````
 <img src="others/kbctr.png" width="300">
 
@@ -87,11 +88,11 @@ You can use the FLVIS-glmapping-FUXI(localization-mapping-planning kits) navigat
 The first step is to install [FLVIS](https://github.com/HKPolyU-UAV/FLVIS), [glmapping](https://github.com/HKPolyU-UAV/glmapping) and [FUXI](https://github.com/chenhanpolyu/fuxi-planner) accordinly. <br />
 Then start the simulator localization mapping and planning kit in sequence. <br />
 ````
-roscd mav_sim_gazebo
+roscd e2es
 ./sim.sh
-roslaunch mav_sim_gazebo flvis.launch
-roslaunch mav_sim_gazebo glmapping.launch
-roslaunch mav_sim_gazebo fuxi.launch
+roslaunch e2es flvis.launch
+roslaunch e2es glmapping.launch
+roslaunch e2es fuxi.launch
 ````
 You can use the 2D-Nav-Goal in RVIZ to publish your destination. <br />
 

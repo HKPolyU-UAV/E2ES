@@ -8,6 +8,7 @@ image_width: 640
 image_height: 360
 cam0_intrinsics: [343.4963684082031, 343.4963684082031, 320, 180]#fx fy cx cy
 cam0_distortion_coeffs: [0.0, 0.0, 0.0, 0.0]#k1 k2 r1 r2
+depth_factor: 1000.0
 T_imu_cam0:
 [ 0.0,  0.0,    1,  0.12,
    -1,  0.0,  0.0,   0.0,
@@ -45,10 +46,19 @@ feature_para5: 0.01
 #goodFeaturesToTrack detector minDistance
 feature_para6: 3
 
+#depth recovery
+#IIR filter ratio
+dr_para1: 0.95
+#triangulate range
+dr_para2: 100
+#Dummy depth enable 1.0, enable 0.0,disable
+dr_para3: 1.0
+
 
 #LocalMapThread
 output_sparse_map: False
 window_size:       8
 
 #LoopClosureTheread
+
 

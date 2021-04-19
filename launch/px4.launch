@@ -11,8 +11,8 @@
 	<arg name="respawn_mavros" default="false" />
 
 	<include file="$(find mavros)/launch/node.launch">
-                <arg name="pluginlists_yaml" value="$(find mav_sim_gazebo)/launch/px4_pluginlists.yaml" />
-                <arg name="config_yaml" value="$(find mav_sim_gazebo)/launch/px4_config.yaml" />
+                <arg name="pluginlists_yaml" value="$(find e2es)/launch/px4_pluginlists.yaml" />
+                <arg name="config_yaml" value="$(find e2es)/launch/px4_config.yaml" />
 
 		<arg name="fcu_url" value="$(arg fcu_url)" />
 		<arg name="gcs_url" value="$(arg gcs_url)" />

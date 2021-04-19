@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mav_sim_gazebo)
+project(e2es)
 
 add_compile_options(-std=c++11)
 # Load catkin and all dependencies required for this package

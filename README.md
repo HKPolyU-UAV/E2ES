@@ -39,6 +39,7 @@ bash ./Tools/setup/ubuntu.sh
 git checkout 71db090
 git submodule sync --recursive
 git submodule update --init --recursive
+sudo apt upgrade libignition-math2
 make px4_sitl_default gazebo
 ````
 

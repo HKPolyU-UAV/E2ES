@@ -35,10 +35,10 @@ Downloadn and install the PX4 (1.11.0)
 ````
 git clone https://github.com/PX4/PX4-Autopilot.git
 cd PX4-Autopilot/
-bash ./Tools/setup/ubuntu.sh
 git checkout 71db090
 git submodule sync --recursive
 git submodule update --init --recursive
+bash ./Tools/setup/ubuntu.sh
 sudo apt upgrade libignition-math2
 make px4_sitl_default gazebo
 ````

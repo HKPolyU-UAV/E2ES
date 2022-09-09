@@ -21,7 +21,7 @@ alt="cla" width="400" border="0" /></a>
 | <img src="others/manual_kb_ctl.gif" width="300">  | <img src="others/click_and_fly.gif" width="300">  |
 
 ### Usage
-Install pre-requires:
+Install pre-requires (ubuntu 18.04):
 ````
 sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip python-testresources libignition-math2 libgazebo9-dev
 pip3 install --user empy toml numpy packaging jinja2
@@ -29,6 +29,16 @@ pip install numpy toml empy packaging
 sudo apt upgrade libignition-math2
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh
+````
+Install pre-requires (ubuntu 20.04):
+````
+sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras ros-noetic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python3-pip python3-testresources libignition-math4 libgazebo11-dev
+pip3 install --user empy toml numpy packaging jinja2
+pip3 install numpy toml empy packaging
+sudo apt upgrade libignition-math4
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo bash ./install_geographiclib_datasets.sh
+# neglect all gazebo9-related warning
 ````
 
 Downloadn and install the PX4 (1.11.0)
@@ -39,7 +49,7 @@ git checkout 71db090
 git submodule sync --recursive
 git submodule update --init --recursive
 bash ./Tools/setup/ubuntu.sh
-sudo apt upgrade libignition-math2
+sudo apt upgrade libignition-math2 #(libignition-math4 for noetic)
 make px4_sitl_default gazebo
 ````
 

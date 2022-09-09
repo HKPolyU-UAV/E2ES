@@ -41,7 +41,7 @@ sudo bash ./install_geographiclib_datasets.sh
 # neglect all gazebo9-related warning
 ````
 
-Downloadn and install the PX4 (1.11.0)
+Download and install the PX4 (1.11.0)
 ````
 git clone https://github.com/PX4/PX4-Autopilot.git
 cd PX4-Autopilot/

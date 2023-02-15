@@ -56,7 +56,7 @@ make px4_sitl_default gazebo
 Clone this repository to catkin src folder say: ~/catkin_ws/src
 ````
 cd ~/catkin_ws/src
-git clone https://github.com/HKPolyU-UAV/E2ES.git
+git clone https://github.com/PAIR-Lab/E2ES.git
 ````
 Install 3rd Part Library
 ````

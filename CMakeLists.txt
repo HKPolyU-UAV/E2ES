@@ -21,6 +21,7 @@ find_package (Sophus REQUIRED )
 find_package (Curses REQUIRED)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
+set(Sophus_LIBRARIES libSophus.so)
 
 catkin_package(
     DEPENDS

@@ -62,7 +62,7 @@ Install 3rd Part Library
 ````
 cd ~/catkin_ws/src/e2es/3rdPartLib
 sudo ./install3rdPartLib.sh
-sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
+sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen #if neccessary
 ````
 Compile
 ````

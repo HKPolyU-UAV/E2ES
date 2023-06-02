@@ -62,6 +62,7 @@ Install 3rd Part Library
 ````
 cd ~/catkin_ws/src/e2es/3rdPartLib
 sudo ./install3rdPartLib.sh
+sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
 ````
 Compile
 ````
@@ -112,5 +113,6 @@ This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [reals
 
 
 ### Maintainer
+[Patrick Lo](), AIRo-Lab, RCUAS, PolyU: patty.lo@connect.polyu.hk <br/> 
 [Shengyang Chen](https://www.polyu.edu.hk/researchgrp/cywen/index.php/en/people/researchstudent.html)(Dept.ME,PolyU): shengyang.chen@connect.polyu.hk <br />
-Han Chen(Dept.AAE,PolyU):stark.chen@connect.polyu.
+

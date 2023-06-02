@@ -54,7 +54,7 @@
     <!-- MAVROS -->
     <arg name="fcu_url" default="udp://:14540@localhost:14557"/>
     <arg name="respawn_mavros" default="false"/>
-    <include file="$(find e2es)/launch/px4.launch">
+    <include file="$(find mavros)/launch/px4.launch">
         <!-- GCS link is provided by SITL -->
         <arg name="gcs_url" value=""/>
         <arg name="fcu_url" value="$(arg fcu_url)"/>

@@ -65,3 +65,10 @@ target_link_libraries(keyboard_ctl
     ${Sophus_LIBRARIES}
     ${CURSES_LIBRARIES}
     )
+
+add_executable(offb
+    src/offb.cpp
+    )
+target_link_libraries(offb
+    ${catkin_LIBRARIES}
+    )

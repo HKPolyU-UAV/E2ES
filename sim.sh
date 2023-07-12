@@ -10,8 +10,8 @@ export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:~/catkin_ws/devel/lib
 echo $GAZEBO_RESOURCE_PATH
 echo $GAZEBO_MODEL_PATH
 echo $GAZEBO_PLUGIN_PATH
-roslaunch e2es rviz.launch &
-sleep 2
+# roslaunch e2es rviz.launch &
+# sleep 2
 roslaunch e2es iris_d435_indoor.launch pause:=false
 
 

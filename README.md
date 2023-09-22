@@ -3,14 +3,17 @@
 ### Introduction
 <img src="others/mavsim.png" width="400">
 
-This Kit provides an end to end simulation solution for MAV visual SLAM and path planning researches. <br />
+This Kit provides an end to end simulation solution for MAV visual SLAM (or path planning) researches. <br />
 In this work, several features are added to the default [PX4](https://github.com/PX4/Firmware) Gazebo Simulator: <br />
 -A realsense D435 model (based on [realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)) <br />
 -Modified IRIS MAV model <br />
 -Several structured/unstructured simulation world <br />
--Keyborad control support <br />
-The work has been verified on Ubuntu 18.04 + ROS melodic environment <br />
-We strongly recommend to you to run this simulation with CUDA supported graphic card!
+<!-- -Keyborad control support <br /> -->
+The work has been verified on Ubuntu 18.04/20.04 + ROS melodic/noetic environment <br />
+Also, if you want to save time,
+we strongly suggest you to use docker image! 
+The link is right [here](https://github.com/HKPolyU-UAV/airo_docker_lib).
+
 ### Demo Video
 
 <a href="https://www.youtube.com/watch?v=sKkA5f62P6g" target="_blank"><img src="https://img.youtube.com/vi/sKkA5f62P6g/0.jpg" 
@@ -21,7 +24,11 @@ alt="cla" width="400" border="0" /></a>
 | <img src="others/manual_kb_ctl.gif" width="300">  | <img src="others/click_and_fly.gif" width="300">  |
 
 ### Usage
-Install pre-requires (ubuntu 18.04):
+If you still insist not to use docker,
+here is the installation instructions:
+
+
+Install pre-requisites (ubuntu 18.04):
 ````
 sudo apt-get install ros-melodic-mavros ros-melodic-mavros-extras ros-melodic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python-pip python-testresources libignition-math2 libgazebo9-dev
 pip3 install --user empy toml numpy packaging jinja2
@@ -30,7 +37,7 @@ sudo apt upgrade libignition-math2
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
 sudo bash ./install_geographiclib_datasets.sh
 ````
-Install pre-requires (ubuntu 20.04):
+Install pre-requisites (ubuntu 20.04):
 ````
 sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras ros-noetic-mavros-msgs libncurses5-dev python3-pip libgstreamer1.0-dev python-jinja2 python3-pip python3-testresources libignition-math4 libgazebo11-dev
 pip3 install --user empy toml numpy packaging jinja2
@@ -102,11 +109,8 @@ Then start the simulator localization mapping and planning kit in sequence. <br 
 ````
 roscd e2es
 ./sim.sh
-roslaunch e2es flvis.launch
-roslaunch e2es glmapping.launch
-roslaunch e2es fuxi.launch
+# and run flvis and fuxi respectively under their directories.
 ````
-You can use the 2D-Nav-Goal in RVIZ to publish your destination. <br />
 
 ### Acknowledgement
 This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [realsense_gazebo_plugin](https://github.com/pal-robotics/realsense_gazebo_plugin)

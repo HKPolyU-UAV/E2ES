@@ -109,7 +109,12 @@ Then start the simulator localization mapping and planning kit in sequence. <br 
 ````
 roscd e2es
 ./sim.sh
-# and run flvis and fuxi respectively under their directories.
+
+# flvis
+roslaunch flvis e2es.launch # under flvis package
+
+# fuxi
+## please refer to fuxi repo
 ````
 
 ### Acknowledgement

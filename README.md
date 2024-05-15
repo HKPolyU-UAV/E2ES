@@ -117,7 +117,10 @@ The topics there you might be interested are as follows:
 | Odom (VIO) | nav_msgs/Odometry | /imu_odom | 200 |
 | IMU (PX4) | sensor_msgs/IMU | /mavros/imu/data | 50 |
 | IMU (Gazebo) | sensor_msgs/IMU | /iris/imu/data | 200 |
+| RAW PCL | sensor_msgs/Image | /camera/depth_aligned_to_color_and_infra1/image_raw | 30 |
 | MAP | sensor_msgs/PointCloud2 | /global_map | 20 |
+
+You can modify the launch file, and 
 
 
 #### 2. Autonomous Navigation (deprecated)

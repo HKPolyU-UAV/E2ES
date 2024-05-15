@@ -105,7 +105,7 @@ roslaunch e2es keyboard_ctr.launch
 ### Running End-To-End simulation
 #### 1. SLAM
 ##### A. 
-You can use the FLVIS + MLMapping kit combination to run SLAM. Please refer to the respective repo, [FLVIS](https://github.com/HKPolyU-UAV/FLVIS) & [MLMap](https://github.com/HKPolyU-UAV/MLMapping) to build them. The launch file for E2ES are [here_FLVIS](https://github.com/HKPolyU-UAV/FLVIS/blob/master/launch/e2es/e2es.launch) & [here_MAP](https://github.com/HKPolyU-UAV/MLMapping/blob/master/launch/mlmapping_e2es.launch). 
+You can use the FLVIS + MLMapping kit combination to run SLAM. Please refer to the respective repo, [FLVIS](https://github.com/HKPolyU-UAV/FLVIS) & [MLMap](https://github.com/HKPolyU-UAV/MLMapping) to build them. Also make sure that you safisfy their prerequisites. The launch file for E2ES are [here_FLVIS](https://github.com/HKPolyU-UAV/FLVIS/blob/master/launch/e2es/e2es.launch) & [here_MAP](https://github.com/HKPolyU-UAV/MLMapping/blob/master/launch/mlmapping_e2es.launch). 
 
 ##### B. 
 The topics there you might be interested are as follows:

@@ -103,6 +103,24 @@ roslaunch e2es keyboard_ctr.launch
 <img src="others/kbctr.png" width="300">
 
 ### Running End-To-End simulation
+#### 1. SLAM
+##### A. 
+You can use the FLVIS + MLMapping kit combination to run SLAM. Please refer to the respective repo, [FLVIS](https://github.com/HKPolyU-UAV/FLVIS) & [MLMap](https://github.com/HKPolyU-UAV/MLMapping) to build them. The launch file for E2ES are [here_FLVIS](https://github.com/HKPolyU-UAV/FLVIS/blob/master/launch/e2es/e2es.launch) & [here_MAP](https://github.com/HKPolyU-UAV/MLMapping/blob/master/launch/mlmapping_e2es.launch). 
+
+##### B. 
+The topics there you might be interested are as follows:
+
+| Topic | Topic Type | Topic Name | Hz |
+|----------|----------|----------|----------|
+| Pose (GT) | geometry_msgs/PoseStamped | /gt_iris_base_link_imu | 50 |
+| Pose (VIO) | geometry_msgs/PoseStamped | /mavros/vision_pose/pose | 200 |
+| Odom (VIO) | nav_msgs/Odometry | /imu_odom | 200 |
+| IMU (PX4) | sensor_msgs/IMU | /mavros/imu/data | 50 |
+| IMU (Gazebo) | sensor_msgs/IMU | /iris/imu/data | 200 |
+| MAP | sensor_msgs/PointCloud2 | /global_map | 20 |
+
+
+#### 2. Autonomous Navigation (deprecated)
 You can use the FLVIS-glmapping-FUXI(localization-mapping-planning kits) navigation system. <br />
 The first step is to install [FLVIS](https://github.com/HKPolyU-UAV/FLVIS), [glmapping](https://github.com/HKPolyU-UAV/glmapping) and [FUXI](https://github.com/chenhanpolyu/fuxi-planner) accordinly. <br />
 Then start the simulator localization mapping and planning kit in sequence. <br />
@@ -122,6 +140,6 @@ This work are based on [PX4 Projcet](https://github.com/PX4/Firmware) and [reals
 
 
 ### Maintainer
-[Patrick Lo](https://github.com/pattylo), AIRo-Lab, RCUAS, PolyU: patty.lo@connect.polyu.hk <br/> 
-[Shengyang Chen](https://github.com/Ttoto)(Dept.ME,PolyU): shengyang.chen@connect.polyu.hk <br />
+[Patrick Lo](https://github.com/pattylo), AIRo-Lab, RCUAS, PolyU <br/> 
+[Shengyang Chen](https://github.com/Ttoto), Dept.ME, PolyU <br />
 

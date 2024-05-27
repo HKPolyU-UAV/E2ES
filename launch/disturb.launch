@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="e2es" type="wrench" name="wrench" output="screen">
+        <param name="wrench_x" type="double" value="2.0"/>
+        <param name="wrench_y" type="double" value="2.0"/>
+        <param name="wrench_z" type="double" value="1.0"/>
+	</node>
+</launch>

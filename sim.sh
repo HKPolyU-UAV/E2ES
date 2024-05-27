@@ -12,6 +12,6 @@ echo $GAZEBO_MODEL_PATH
 echo $GAZEBO_PLUGIN_PATH
 # roslaunch e2es rviz.launch &
 # sleep 2
-roslaunch e2es iris_d435_indoor.launch pause:=false
+roslaunch e2es vanilla.launch pause:=false
 
 

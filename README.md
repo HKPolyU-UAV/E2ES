@@ -94,12 +94,19 @@ cd PX4_Firmware_PATH
 Run the simulator
 ````
 roscd e2es
-./sim.sh
+./sim.sh map # for mapping environment and camera
+./sim.sh single # for control testing, only 1 drone will be spawned
+./sim.sh swarm # for control testing, 3 drones will be spawned
 ````
 Using keyboard to control the MAV in simulator
 ````
 roslaunch e2es keyboard_ctr.launch
 ````
+You can also add disturbances to the environemnt via
+```
+roslaunch e2es disturb.launch
+```
+
 <img src="others/kbctr.png" width="300">
 
 ### Running End-To-End simulation

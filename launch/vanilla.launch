@@ -16,11 +16,6 @@
     <arg name="sdf" default="$(find e2es)/gazebo/models/$(arg my_vehicle)/$(arg my_vehicle).sdf"/>
 
 
-<!--    <arg name="my_vehicle" default="iris"/>
-    <arg name="world" default="$(find mavlink_sitl_gazebo)/worlds/empty.world"/>
-    <arg name="sdf" default="$(find mavlink_sitl_gazebo)/models/$(arg my_vehicle)/$(arg my_vehicle).sdf"/>-->
-
-
     <env name="PX4_SIM_MODEL" value="$(arg vehicle)" />
     <env name="PX4_ESTIMATOR" value="$(arg est)" />
 

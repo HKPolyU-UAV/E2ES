@@ -102,12 +102,12 @@ Using keyboard to control the MAV in simulator
 ````
 roslaunch e2es keyboard_ctr.launch
 ````
+<img src="others/kbctr.png" width="300">
+
 You can also add disturbances to the environemnt via
 ```
 roslaunch e2es disturb.launch
 ```
-
-<img src="others/kbctr.png" width="300">
 
 ### Running End-To-End simulation
 #### 1. SLAM

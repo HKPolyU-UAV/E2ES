@@ -23,6 +23,12 @@ alt="cla" width="400" border="0" /></a>
 | ---------------------- | ---------------------- |
 | <img src="others/manual_kb_ctl.gif" width="300">  | <img src="others/click_and_fly.gif" width="300">  |
 
+### Main Functions
+We include 3 main functionalities to users:
+- Mapping environments for path planning and SLAM works.
+- A single drone environment for controller design. Disturbances can be added.
+- A team of 3 drones for swarm applications.
+
 ### Usage
 If you still insist not to use docker,
 here is the installation instructions:

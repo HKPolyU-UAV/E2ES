@@ -141,9 +141,11 @@ int main(int argc, char **argv)
   nh.getParam("velocity_horizon", h_speed);
   nh.getParam("velocity_vertical", v_speed);
   nh.getParam("angular_velocity_turn", turn_speed);
+  nh.getParam("update_rate", update_rate);
   cout << "horizon speed: " <<  h_speed << endl;
   cout << "vertical speed: " << v_speed << endl;
   cout << "turning speed: " <<  turn_speed << endl;
+  cout << "update rate: " <<  update_rate << endl;
 
   ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
       ("/mavros/state", 10, state_cb);
